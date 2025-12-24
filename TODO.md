@@ -1,0 +1,9 @@
+- [x] Modify components/navbar.html to structure left and right sections and fix CSS link
+- [x] Add CSS styles to css/navbar.css for navbar layout and styling
+- [x] Create index.html with navbar and main sections
+- [x] Add main.css for general styling
+- [x] Pull icons and images from Figma design to img/ folder
+- [x] Integrate important images/elements from elements demoduck folder to img/ folder without duplicates
+- [x] Create multi-page website with home, about, services, contact in separate folders
+- [x] Remake website with coded text and CSS instead of text/color images, matching Figma reference
+- [x] Update website: remove gradient, add profile development section to home, add percentages to results
