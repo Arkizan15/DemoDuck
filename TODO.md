@@ -7,3 +7,7 @@
 - [x] Create multi-page website with home, about, services, contact in separate folders
 - [x] Remake website with coded text and CSS instead of text/color images, matching Figma reference
 - [x] Update website: remove gradient, add profile development section to home, add percentages to results
+- [x] Separate single index.html into four separate files: index.html (Home), quiz.html (Quiz/Test), result.html (Result), about.html (About)
+- [x] Create 5 CSS files: common.css, home.css, quiz.css, result.css, about.css
+- [x] Create 4 JavaScript files: quizData.js, animalData.js, quiz.js, result.js
+- [x] Integrate HTML files with appropriate CSS and JS files

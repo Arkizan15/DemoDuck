@@ -1,0 +1,72 @@
+<!-- ============================================ -->
+<!-- result.html (Result Page) -->
+<!-- ============================================ -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoDuck! - Hasil</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/result.css">
+    <link rel="icon" type="image/png" href="img/logoDemoDuck.png">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon"><img src="img/logo.png" alt=""></div>
+            <span><img src="img/DemoDuck!.png" alt=""></span>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="quiz.html">TEST</a>
+            <a href="result.html">HASIL</a>
+            <a href="about.html">TENTANG KAMI</a>
+        </nav>
+    </header>
+
+    <div class="result-container">
+        <div class="result-header">
+            <h1 class="result-title" id="resultTitle">SELAMAT! ANDA ADALAH....</h1>
+            <div class="result-image" id="resultImage">[Animal Image]</div>
+            <div class="trait-buttons" id="traitButtons"></div>
+        </div>
+
+        <div class="result-description">
+            <h2>Mengapa anda menjadi <span id="animalName">harimau</span>?</h2>
+            <p id="resultDescription"></p>
+        </div>
+
+        <button class="btn-share" onclick="shareResult()">Bagikan Hasil Ini!</button>
+
+        <div class="compatibility-section">
+            <h2 class="compatibility-title">Kecocokan Anda Dengan Hewan Lain</h2>
+            <div class="compatibility-list" id="compatibilityList"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-logos">
+            <div class="footer-logo"><img src="img/logoPPLG.png" alt=""></div>
+            <div class="footer-logo"><img src="img/LogoSmea.png" alt=""></div>
+            <div class="footer-logo"><img src="img/logoDemoDuck.png" alt=""></div>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">HOME</a>
+            <a href="quiz.html">TES</a>
+            <a href="result.html">HASIL</a>
+            <a href="about.html">TENTANG KAMI</a>
+        </div>
+        <div class="footer-contact">
+            <div>083623846272</div>
+            <div>cdelunee0@gmail.com</div>
+            <div>clair'de lune</div>
+            <div>Jl. Wijaya Kusuma</div>
+        </div>
+    </footer>
+
+    <script src="js/animalData.js"></script>
+    <script src="js/result.js"></script>
+</body>
+</html>

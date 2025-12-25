@@ -1,11 +1,110 @@
+<!-- index.html (Home Page) -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=home/">
-    <title>Redirecting to DemoDuck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoDuck! - Home</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="icon" type="image/png" href="img/logoDemoDuck.png">
+
 </head>
 <body>
-    <p>Redirecting to <a href="home/">DemoDuck Home</a></p>
+    <header>
+        <div class="logo">
+            <div class="logo-icon"><img src="img/logo.png" alt=""></div>
+            <span><img src="img/DemoDuck!.png" alt=""></span>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="quiz.html">TEST</a>
+            <a href="result.html">HASIL</a>
+            <a href="about.html">TENTANG KAMI</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-card hero-left">
+            <h1 class="hero-title"><img src="img/DemoDuck!-1.png" alt=""></h1>
+            <p class="hero-text">
+                Temukan Hewanmu: Tes kepribadian MBTI, selesaikan quizz sesuai dengan kepribadian mu dan
+                dapatkan karakter hewan sesuai dengan sikap dan karakter mu
+            </p>
+            <button class="btn-start" onclick="window.location.href='quiz.html'">Mulai Tes!</button>
+        </div>
+        <div class="hero-card hero-right">
+            
+                <img src="img\kucing-hero.png" alt="">
+            
+        </div>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-item" style="background: #FFCDD2;"><img src="img\kucing-hero.png" alt=""></div>
+            <div class="carousel-item" style="background: #BBDEFB;"><img src="img\kucing-hero.png" alt=""></div>
+            <div class="carousel-item" style="background: #F8BBD0;"><img src="img\kucing-hero.png" alt=""></div>
+            
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <h2 class="section-title">PROFILE DEVELOPMENT</h2>
+        <div class="profile-grid">
+            <div class="profile-card">
+                <div class="profile-avatar"><img src="img/Kiki.png" alt="ARKAN RIFQI F"></div>
+                <div class="profile-role role-programmer">PROGRAMMER</div>
+                <div class="profile-name">ARKAN RIFQI F<br>SMKN 1 BANYUWANGI</div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-avatar"><img src="img/deshilva.png" alt="DESHILVA BINTANG S"></div>
+                <div class="profile-role role-designer">UI/UX DESIGNER</div>
+                <div class="profile-name">DESHILVA BINTANG S<br>SMKN 1 BANYUWANGI</div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-avatar"><img src="img/nayla.png" alt="ALVY ANDINI NAYLA F"></div>
+                <div class="profile-role role-designer">UI/UX DESIGNER</div>
+                <div class="profile-name">ALVY ANDINI NAYLA F<br>SMKN 1 BANYUWANGI</div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-avatar"><img src="img/chantika.png" alt="CHANTIKA KUMALA S"></div>
+                <div class="profile-role role-leader">PENANGGUNG JAWAB</div>
+                <div class="profile-name">CHANTIKA KUMALA S<br>SMKN 1 BANYUWANGI</div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-avatar"><img src="img/arin.png" alt="ARINA MAYANG F"></div>
+                <div class="profile-role role-marketing">MARKETING</div>
+                <div class="profile-name">ARINA MAYANG F<br>SMKN 1 BANYUWANGI</div>
+            </div>
+            <div class="profile-card">
+                <div class="profile-avatar"><img src="img/anarika.png" alt="ANARIKA UMMATUS S"></div>
+                <div class="profile-role role-admin">ADMINISTRASI</div>
+                <div class="profile-name">ANARIKA UMMATUS S<br>SMKN 1 BANYUWANGI</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logos">
+            <div class="footer-logo"><img src="img/logoPPLG.png" alt=""></div>
+            <div class="footer-logo"><img src="img/LogoSmea.png" alt=""></div>
+            <div class="footer-logo"><img src="img/logoDemoDuck.png" alt=""></div>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">HOME</a>
+            <a href="quiz.html">TES</a>
+            <a href="result.html">HASIL</a>
+            <a href="about.html">TENTANG KAMI</a>
+        </div>
+        <div class="footer-contact">
+            <div>083623846272</div>
+            <div>cdelunee0@gmail.com</div>
+            <div>clair'de lune</div>
+            <div>Jl. Wijaya Kusuma</div>
+        </div>
+    </footer>
 </body>
 </html>
+
+
