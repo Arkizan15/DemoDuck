@@ -14,22 +14,22 @@ function initQuiz() {
 function displayQuestion() {
     const questionContainer = document.getElementById('questionContainer');
 
-    if (currentQuestionIndex >= quizQuestions.length) {
+    if (currentQuestionIndex >= quizData.questions.length) {
         // Quiz completed
         showQuizCompleted();
         return;
     }
 
-    const currentQuestion = quizQuestions[currentQuestionIndex];
+    const currentQuestion = quizData.questions[currentQuestionIndex];
 
     questionContainer.innerHTML = `
         <div class="question-card">
             <h2 class="question-title">${currentQuestion.question}</h2>
             <div class="options-container">
-                ${currentQuestion.options.map((option, index) => `
-                    <button class="option-btn" onclick="selectOption('${String.fromCharCode(65 + index)}')">
+                ${currentQuestion.answers.map((answer, index) => `
+                    <button class="option-btn" onclick="selectOption(${index})">
                         <div class="option-letter">${String.fromCharCode(65 + index)}</div>
-                        <div class="option-text">${option}</div>
+                        <div class="option-text">${answer.text}</div>
                     </button>
                 `).join('')}
             </div>
@@ -38,9 +38,9 @@ function displayQuestion() {
             <button class="btn-nav" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? 'disabled' : ''}>Sebelumnya</button>
             <div class="progress-container">
                 <div class="progress-bar">
-                    <div class="progress-fill" style="width: ${(currentQuestionIndex + 1) / quizQuestions.length * 100}%"></div>
+                    <div class="progress-fill" style="width: ${(currentQuestionIndex + 1) / quizData.questions.length * 100}%"></div>
                 </div>
-                <div class="progress-text">Pertanyaan ${currentQuestionIndex + 1} dari ${quizQuestions.length}</div>
+                <div class="progress-text">Pertanyaan ${currentQuestionIndex + 1} dari ${quizData.questions.length}</div>
             </div>
             <button class="btn-nav" id="nextBtn" onclick="nextQuestion()" disabled>Selanjutnya</button>
         </div>
@@ -49,13 +49,16 @@ function displayQuestion() {
     updateProgress();
 }
 
-function selectOption(answer) {
-    userAnswers[currentQuestionIndex] = answer;
+function selectOption(answerIndex) {
+    const currentQuestion = quizData.questions[currentQuestionIndex];
+    const selectedAnswer = currentQuestion.answers[answerIndex];
+
+    userAnswers[currentQuestionIndex] = selectedAnswer;
 
     // Highlight selected option
     const optionButtons = document.querySelectorAll('.option-btn');
     optionButtons.forEach((btn, index) => {
-        if (String.fromCharCode(65 + index) === answer) {
+        if (index === answerIndex) {
             btn.classList.add('selected');
         } else {
             btn.classList.remove('selected');
@@ -67,7 +70,7 @@ function selectOption(answer) {
 }
 
 function nextQuestion() {
-    if (currentQuestionIndex < quizQuestions.length - 1) {
+    if (currentQuestionIndex < quizData.questions.length - 1) {
         currentQuestionIndex++;
         displayQuestion();
     } else {
@@ -85,7 +88,7 @@ function previousQuestion() {
 function updateProgress() {
     const progressFill = document.querySelector('.progress-fill');
     if (progressFill) {
-        progressFill.style.width = `${(currentQuestionIndex + 1) / quizQuestions.length * 100}%`;
+        progressFill.style.width = `${(currentQuestionIndex + 1) / quizData.questions.length * 100}%`;
     }
 }
 

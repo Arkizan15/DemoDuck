@@ -1,13 +1,5 @@
-- [x] Modify components/navbar.html to structure left and right sections and fix CSS link
-- [x] Add CSS styles to css/navbar.css for navbar layout and styling
-- [x] Create index.html with navbar and main sections
-- [x] Add main.css for general styling
-- [x] Pull icons and images from Figma design to img/ folder
-- [x] Integrate important images/elements from elements demoduck folder to img/ folder without duplicates
-- [x] Create multi-page website with home, about, services, contact in separate folders
-- [x] Remake website with coded text and CSS instead of text/color images, matching Figma reference
-- [x] Update website: remove gradient, add profile development section to home, add percentages to results
-- [x] Separate single index.html into four separate files: index.html (Home), quiz.html (Quiz/Test), result.html (Result), about.html (About)
-- [x] Create 5 CSS files: common.css, home.css, quiz.css, result.css, about.css
-- [x] Create 4 JavaScript files: quizData.js, animalData.js, quiz.js, result.js
-- [x] Integrate HTML files with appropriate CSS and JS files
+- [x] Remove jaguar from animalProfiles in js/animalData.js
+- [x] Remove jaguar from compatibility arrays in harimau, serigala, rubah, kelelawar in js/animalData.js
+- [x] Remove all "Jaguar" type answers from quizData.js questions
+- [x] Update calculateAnimalResult to exclude jaguar in js/animalData.js
+- [x] Test quiz functionality
