@@ -113,3 +113,51 @@ footer {
     color: #999;
     font-weight: bold;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        gap: 15px;
+    }
+
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-logos {
+        gap: 20px;
+    }
+
+    .footer-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-nav {
+        gap: 10px;
+    }
+
+    .footer-contact {
+        gap: 10px;
+    }
+}

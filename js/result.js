@@ -18,9 +18,12 @@ function displayResult() {
     const animalProfile = animalProfiles[animalKey];
 
     // Update page content
-    document.getElementById('resultTitle').textContent = 
+    document.getElementById('resultTitle').textContent =
         `SELAMAT! ANDA ADALAH....
 ${animalProfile.fullName.toUpperCase()}`;
+
+    // Display animal image
+    document.getElementById('resultImage').innerHTML = `<img src="img/Animals/${animalKey}.jpeg" alt="${animalProfile.fullName}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">`;
 
     // Display traits
     const traitButtonsContainer = document.getElementById('traitButtons');
@@ -38,10 +41,15 @@ ${animalProfile.fullName.toUpperCase()}`;
         let compatClass = 'compatibility-medium';
         if (comp.level === 'high') compatClass = 'compatibility-high';
         if (comp.level === 'low') compatClass = 'compatibility-low';
-        
+
+        // Convert animal name to lowercase for image path
+        const animalImageName = comp.animal.toLowerCase();
+
         return `
             <div class="compatibility-item ${compatClass}">
-                <div class="compatibility-icon"></div>
+                <div class="compatibility-icon">
+                    <img src="img/Animals/${animalImageName}.jpeg" alt="${comp.animal}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
                 <div class="compatibility-name">${comp.animal}</div>
                 <div class="compatibility-percent">${comp.percent}%</div>
             </div>
