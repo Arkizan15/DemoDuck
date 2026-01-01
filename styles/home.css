@@ -64,12 +64,12 @@
 }
 
 .carousel-track {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(351px, 1fr));
+    display: flex;
     gap: 20px;
     padding: 0 50px;
     max-width: 1200px;
     margin: 0 auto;
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
