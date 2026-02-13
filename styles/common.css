@@ -39,6 +39,14 @@ header {
     justify-content: center;
     color: #C62828;
     font-weight: bold;
+    overflow: hidden;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 nav {
@@ -76,6 +84,14 @@ footer {
 .footer-logo {
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
 }
 
@@ -127,8 +143,8 @@ footer {
     }
 
     .logo-icon {
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
     }
 
     nav {
