@@ -1,16 +1,22 @@
 <!-- index.html (Home Page) -->
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DemoDuck! - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/common.css">
-    <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="icon" type="image/png" href="img/logo.png">
 
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -25,19 +31,19 @@
         </nav>
     </header>
 
-    <section class="hero" style="padding-top: 70px;">
+    <section class="hero">
         <div class="hero-card hero-left">
             <h1 class="hero-title"><img src="img/DemoDuck!-1.png" alt=""></h1>
             <p class="hero-text">
-                Temukan Hewanmu: Tes kepribadian MBTI, selesaikan quizz sesuai dengan kepribadian mu dan
+                Temukan Hewanmu: Tes kepribadian berbasis hewan, selesaikan quizz sesuai dengan kepribadian mu dan
                 dapatkan karakter hewan sesuai dengan sikap dan karakter mu
             </p>
             <button class="btn-start" onclick="window.location.href='quiz.html'">Mulai Tes!</button>
         </div>
         <div class="hero-card hero-right">
-            
-                <img src="img/Rectangle 4.png" alt="">
-            
+
+            <img src="img/Rectangle 4.png" alt="">
+
         </div>
     </section>
 
@@ -46,7 +52,7 @@
             <div class="carousel-item" style="background: #FFCDD2;"><img src="img/Rectangle 4.png" alt=""></div>
             <div class="carousel-item" style="background: #BBDEFB;"><img src="img/Rectangle 4.png" alt=""></div>
             <div class="carousel-item" style="background: #F8BBD0;"><img src="img/Rectangle 4.png" alt=""></div>
-            
+
         </div>
     </section>
 
@@ -63,35 +69,40 @@
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="profile-card">
-                        <div class="profile-avatar"><img src="img/deshilva.png" alt="DESHILVA BINTANG S" class="img-fluid"></div>
+                        <div class="profile-avatar"><img src="img/deshilva.png" alt="DESHILVA BINTANG S"
+                                class="img-fluid"></div>
                         <div class="profile-role role-designer">UI/UX DESIGNER</div>
                         <div class="profile-name">DESHILVA BINTANG S<br>SMKN 1 BANYUWANGI</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="profile-card">
-                        <div class="profile-avatar"><img src="img/nayla.png" alt="ALVY ANDINI NAYLA F" class="img-fluid"></div>
+                        <div class="profile-avatar"><img src="img/nayla.png" alt="ALVY ANDINI NAYLA F"
+                                class="img-fluid"></div>
                         <div class="profile-role role-designer">UI/UX DESIGNER</div>
                         <div class="profile-name">ALVY ANDINI NAYLA F<br>SMKN 1 BANYUWANGI</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="profile-card">
-                        <div class="profile-avatar"><img src="img/chantika.png" alt="CHANTIKA KUMALA S" class="img-fluid"></div>
+                        <div class="profile-avatar"><img src="img/chantika.png" alt="CHANTIKA KUMALA S"
+                                class="img-fluid"></div>
                         <div class="profile-role role-leader">PENANGGUNG JAWAB</div>
                         <div class="profile-name">CHANTIKA KUMALA S<br>SMKN 1 BANYUWANGI</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="profile-card">
-                        <div class="profile-avatar"><img src="img/arin.png" alt="ARINA MAYANG F" class="img-fluid"></div>
+                        <div class="profile-avatar"><img src="img/arin.png" alt="ARINA MAYANG F" class="img-fluid">
+                        </div>
                         <div class="profile-role role-marketing">MARKETING</div>
                         <div class="profile-name">ARINA MAYANG F<br>SMKN 1 BANYUWANGI</div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 mb-4">
                     <div class="profile-card">
-                        <div class="profile-avatar"><img src="img/anarika.png" alt="ANARIKA UMMATUS S" class="img-fluid"></div>
+                        <div class="profile-avatar"><img src="img/anarika.png" alt="ANARIKA UMMATUS S"
+                                class="img-fluid"></div>
                         <div class="profile-role role-admin">ADMINISTRASI</div>
                         <div class="profile-name">ANA RIKA UMMATUS S<br>SMKN 1 BANYUWANGI</div>
                     </div>
@@ -122,7 +133,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Carousel functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const carouselTrack = document.querySelector('.carousel-track');
             const carouselItems = document.querySelectorAll('.carousel-item');
             let currentIndex = 0;
@@ -151,6 +162,5 @@
         });
     </script>
 </body>
+
 </html>
-
-

@@ -1,4 +1,5 @@
 /* common.css - Shared styles across all pages */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -7,39 +8,46 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #FFF8E1;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #FFFFFF;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: #1E293B;
 }
 
 /* Header */
 header {
-    background: #C62828;
-    padding: 15px 50px;
+    background: #0EA5E9;
+    padding: 12px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.25);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 16px;
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #C62828;
+    color: #0EA5E9;
     font-weight: bold;
     overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
 .logo-icon img {
@@ -51,25 +59,30 @@ header {
 
 nav {
     display: flex;
-    gap: 20px;
+    gap: 24px;
+    align-items: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: opacity 0.3s;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: background 0.2s, opacity 0.2s;
 }
 
 nav a:hover {
-    opacity: 0.8;
+    background: rgba(255,255,255,0.2);
 }
 
 /* Footer */
 footer {
-    background: #C62828;
+    background: #0F172A;
     color: white;
-    padding: 40px 50px;
+    padding: 36px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,12 +152,12 @@ footer {
     }
 
     .logo {
-        gap: 15px;
+        gap: 12px;
     }
 
     .logo-icon {
-        width: 50px;
-        height: 50px;
+        width: 52px;
+        height: 52px;
     }
 
     nav {

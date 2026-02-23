@@ -3,6 +3,15 @@
 let currentQuestionIndex = 0;
 let userAnswers = [];
 
+// Scroll to the question area (accounting for sticky navbar)
+function scrollToQuestion() {
+    const container = document.querySelector('.quiz-container');
+    if (container) {
+        const top = container.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    }
+}
+
 // Initialize quiz when page loads
 document.addEventListener('DOMContentLoaded', initQuiz);
 
@@ -46,7 +55,20 @@ function displayQuestion() {
         </div>
     `;
 
+    // Restore previously selected answer if navigating back
+    if (userAnswers[currentQuestionIndex]) {
+        const savedAnswer = userAnswers[currentQuestionIndex];
+        const optionButtons = document.querySelectorAll('.option-btn');
+        currentQuestion.answers.forEach((answer, index) => {
+            if (answer.text === savedAnswer.text) {
+                optionButtons[index].classList.add('selected');
+                document.getElementById('nextBtn').disabled = false;
+            }
+        });
+    }
+
     updateProgress();
+    scrollToQuestion();
 }
 
 function selectOption(answerIndex) {
