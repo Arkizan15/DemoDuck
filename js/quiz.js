@@ -45,14 +45,16 @@ function displayQuestion() {
             </div>
         </div>
         <div class="navigation-buttons">
-            <button class="btn-nav" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? 'disabled' : ''}>Sebelumnya</button>
             <div class="progress-container">
                 <div class="progress-bar">
                     <div class="progress-fill" style="width: ${(currentQuestionIndex + 1) / quizData.questions.length * 100}%"></div>
                 </div>
                 <div class="progress-text">Pertanyaan ${currentQuestionIndex + 1} dari ${quizData.questions.length}</div>
             </div>
-            <button class="btn-nav" id="nextBtn" onclick="nextQuestion()" disabled>Selanjutnya</button>
+            <div class="buttons-row">
+                <button class="btn-nav" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? 'disabled' : ''}>Sebelumnya</button>
+                <button class="btn-nav" id="nextBtn" onclick="nextQuestion()" disabled>Selanjutnya</button>
+            </div>
         </div>
     `;
 

@@ -43,19 +43,23 @@
             <div class="about-title">TENTANG KAMI</div>
         </div>
 
-        <div class="team-section">
-            <div class="team-card">
-                <div class="team-image">
-                    <img src="img/admin.png" alt="">
+        <div class="team-carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">&lt;</button>
+            <div class="team-track">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="img/admin.png" alt="">
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image"><img src="img/design.png" alt=""></div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image"><img src="img/program.png" alt=""></div>
                 </div>
             </div>
-            <div class="team-card">
-                <div class="team-image"><img src="img/design.png" alt=""></div>
-
-            </div>
-            <div class="team-card">
-                <div class="team-image"><img src="img/program.png" alt=""></div>
-            </div>
+            <button class="carousel-btn next" id="nextBtn">&gt;</button>
+            <div class="carousel-dots" id="carouselDots"></div>
         </div>
 
         <div class="about-content">
@@ -67,7 +71,8 @@
                     terdiri dari 6 orang yaitu Arkan Rifqy F, Alvy Andini Nayla, Arina Mayang F, Anarika Ummatus S,
                     Deshilva Bintang S dan Chantika Kumala S.
                     Kami membuat website ini dengan tujuan untuk memberikan hiburan sekaligus edukasi kepada pengguna
-                    tentang kepribadian mereka melalui tes MBTI yang dikaitkan dengan karakter hewan. Kami berharap
+                    tentang kepribadian mereka melalui tes Kepribadian yang dikaitkan dengan karakter hewan. Kami
+                    berharap
                     website ini dapat membantu pengguna lebih memahami diri mereka sendiri dan menemukan sisi unik dari
                     kepribadian mereka.
                 </p>
@@ -95,6 +100,60 @@
         </div>
     </footer>
     <script src="js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('.team-track');
+            const cards = document.querySelectorAll('.team-card');
+            const dotsContainer = document.getElementById('carouselDots');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
+            const totalCards = cards.length;
+
+            if (track && totalCards > 0) {
+                // Create dots
+                for (let i = 0; i < totalCards; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => {
+                        currentIndex = i;
+                        updateCarousel();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+
+                function updateCarousel() {
+                    if (window.innerWidth <= 768) {
+                        track.style.transform = `translateX(${-currentIndex * 100}%)`;
+                    } else {
+                        const cardWidth = cards[0].offsetWidth;
+                        const gap = 30;
+                        const translateX = -currentIndex * (cardWidth + gap);
+                        track.style.transform = `translateX(${translateX}px)`;
+                    }
+
+                    // Update dots
+                    document.querySelectorAll('.dot').forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentIndex);
+                    });
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+                    updateCarousel();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % totalCards;
+                    updateCarousel();
+                });
+
+                // Recalculate on window resize
+                window.addEventListener('resize', updateCarousel);
+            }
+        });
+    </script>
 </body>
 
 </html>
