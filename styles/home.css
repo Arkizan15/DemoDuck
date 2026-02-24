@@ -104,7 +104,7 @@
 .profile-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 40px;
 }
 
 .profile-card {
@@ -200,17 +200,31 @@
     }
 
     .profile-section {
-        padding: 30px 20px;
+        padding: 30px 10px;
     }
 
     .profile-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
     }
-}
 
-@media (max-width: 480px) {
-    .profile-grid {
-        grid-template-columns: 1fr;
+    .profile-card {
+        padding: 12px 6px;
+    }
+
+    .profile-avatar {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 8px;
+    }
+
+    .profile-role {
+        font-size: 8px;
+        padding: 4px 6px;
+        margin-bottom: 6px;
+    }
+
+    .profile-name {
+        font-size: 9px;
     }
 }

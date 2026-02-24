@@ -26,7 +26,7 @@
 .team-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 30px;
     margin-bottom: 60px;
 }
 
@@ -51,9 +51,10 @@
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
     margin-top: 60px;
+    align-items: center;
 }
 
 .about-image {
@@ -97,11 +98,17 @@
 /* Responsive */
 @media (max-width: 768px) {
     .team-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image {
+        height: 300px;
     }
 
     .about-container {

@@ -5,9 +5,10 @@ let userAnswers = [];
 
 // Scroll to the question area (accounting for sticky navbar)
 function scrollToQuestion() {
-    const container = document.querySelector('.quiz-container');
-    if (container) {
-        const top = container.getBoundingClientRect().top + window.scrollY - 80;
+    const card = document.querySelector('.question-card');
+    if (card) {
+        const offset = window.innerWidth < 768 ? 20 : 80;
+        const top = card.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
     }
 }
@@ -135,7 +136,7 @@ function completeQuiz() {
 }
 
 // Allow keyboard navigation
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowRight' && !document.getElementById('nextBtn').disabled) {
         nextQuestion();
     } else if (event.key === 'ArrowLeft' && currentQuestionIndex > 0) {
